@@ -1,0 +1,56 @@
+
+
+
+
+# Secure Network with AxoSecurity
+
+link == https://help.mikrotik.com/docs/pages/viewpage.action?pageId=28606504
+
+# Mikrotik DDOS Protection 
+
+#---------------1-------------------
+
+#Syn-flood protection
+
+/ip/settings/set tcp-syncookies=yes
+
+explain:
+	
+	https://www.youtube.com/watch?v=rsVsU6-nfdM
+
+	https://www.youtube.com/watch?v=ymttSrEo0R0
+
+
+
+#-----------------------2--------------
+
+#ICMP-flood protection
+
+add chain=ICMP comment="Echo request - Avoiding Ping Flood Axo " icmp-options=8:0 limit=1,5 protocol=icmp
+
+
+add action=accept chain=input limit=10,5:packet protocol=icmp 
+
+add action=drop chain=input protocol=icmp
+
+
+------------------------------------------------------
+
+DHCP Starvation
+
+udp flood 
+
+
+
+# DNS REBINDING 
+
+link of github page 
+
+
+# ip fragmentation
+
+
+
+	<h2>Teardrop attack</h2>
+
+https://www.youtube.com/watch?v=-s53tku0fJ0&t=2

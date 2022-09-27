@@ -1,0 +1,40 @@
+
+
+# DNS REBINDING
+
+DNS rebinding is a method of manipulating resolution of domain names that is commonly used as a form of computer attack. In this attack, a malicious web page causes visitors to run a client-side script that attacks machines elsewhere on the network. In theory, the same-origin policy prevents this from happening: client-side scripts are only allowed to access content on the same host that served the script. Comparing domain names is an essential part of enforcing this policy, so DNS rebinding circumvents this protection by abusing the Domain Name System (DNS). So same-origin policy cant prevent this attack 
+
+<h4> wikipedia for more info 
+</h4>
+https://en.wikipedia.org/wiki/DNS_rebinding
+
+
+# How to Check DNS REBINDING Vulnerabillity 
+
+
+nslookup net10.rebindtest.com
+
+nslookup net192.rebindtest.com
+
+nslookup net10.rebindtest.com
+
+nslookup net172.rebindtest.com
+
+nslookup net127.rebindtest.com
+
+
+# How to protect yourself from DNS_rebinding ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
